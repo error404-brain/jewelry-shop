@@ -31,4 +31,11 @@
     text-decoration: underline;
   }
   
+  .card img {
+    transition: transform 0.3s ease-in-out; 
+  }
+  
+  .card img:hover {
+    transform: scale(1.1); 
+  }
   
