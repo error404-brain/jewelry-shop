@@ -1,4 +1,4 @@
-import logo from './assets/Swarovski_logo.png';
+import logo from '../assets/Swarovski_logo.png';
 
 function Header() {
     return (
