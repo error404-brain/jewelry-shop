@@ -9,6 +9,7 @@ import decorations from '../assets/5682735.avif';
 import jpg1 from '../assets/jpg (1).avif';
 import jpg from '../assets/jpg.avif';
 import jpg2 from '../assets/jpg (2).avif';
+import { Link } from 'react-router-dom';
 
 
 function BodyContent() {
@@ -79,7 +80,7 @@ function BodyContent() {
                 <div className="flex flex-col md:flex-row justify-between p-6">
                     <div className='w-full md:w-1/3 p-4 card'>
                             <img src={jewelry} alt="Radiant Necklaces" className="w-full h-auto" />
-                            <a href='#' className="text-black text-lg text-center font-serif mt-4">Jewelry</a>
+                            <Link to='/products' className="text-black text-lg text-center font-serif mt-4">Jewelry</Link>
                     </div>
 
                     <div className='w-full md:w-1/3 p-4 card'>
