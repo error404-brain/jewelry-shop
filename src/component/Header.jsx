@@ -1,4 +1,5 @@
 import logo from '../assets/Swarovski_logo.png';
+import { Link } from 'react-router-dom';
 
 function Header() {
     return (
@@ -6,12 +7,14 @@ function Header() {
             {/* Giao diện cho máy tính */}
             <div className="hidden md:block">
                 <div className="container mx-auto flex justify-center items-center hover:opacity-50 hover:bg-grey-800">
-                    <img src={logo} alt="Swarovski Logo" className="w-auto h-32" />
+                    <Link to="/" className="text-black text-lg font-Times hover:opacity-50">
+                        <img src={logo} alt="Swarovski Logo" className="w-auto h-32" />
+                    </Link>
                 </div>
                 <nav className="bg-white border-gray-800 p-4">
                     <div className="container mx-auto flex justify-between items-center">
                         <a href="#" className="text-black text-lg font-Times hover:opacity-50">New in</a>
-                        <a href="#" className="text-black text-lg font-Times hover:opacity-50">Jewelry</a>
+                        <Link to="/products" className="text-black text-lg font-Times hover:opacity-50">Jewelry</Link>
                         <a href="#" className="text-black text-lg font-Times hover:opacity-50">Watches</a>
                         <a href="#" className="text-black text-lg font-Times hover:opacity-50">Accessories</a>
                         <a href="#" className="text-black text-lg font-Times hover:opacity-50">Decoration</a>

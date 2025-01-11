@@ -6,6 +6,10 @@ import Watch from '../assets/5377576.avif';
 import jewelry from '../assets/5465384.avif';
 import accessories from '../assets/5534325.avif';
 import decorations from '../assets/5682735.avif';
+import jpg1 from '../assets/jpg (1).avif';
+import jpg from '../assets/jpg.avif';
+import jpg2 from '../assets/jpg (2).avif';
+import { Link } from 'react-router-dom';
 
 
 function BodyContent() {
@@ -74,24 +78,24 @@ function BodyContent() {
             <div className="w-full bg-gray-200 py-10 px-4">
                 <p className="text-black text-2xl md:text-3xl text-center font-serif">Shop by Categorys</p>
                 <div className="flex flex-col md:flex-row justify-between p-6">
-                    <div className='w-full md:w-1/3 p-4'>
+                    <div className='w-full md:w-1/3 p-4 card'>
                             <img src={jewelry} alt="Radiant Necklaces" className="w-full h-auto" />
-                            <p className="text-black text-lg text-center font-serif mt-4">Jewelry</p>
+                            <Link to='/products' className="text-black text-lg text-center font-serif mt-4">Jewelry</Link>
                     </div>
 
-                    <div className='w-full md:w-1/3 p-4'>
+                    <div className='w-full md:w-1/3 p-4 card'>
                             <img src={Watch} alt="Radiant Necklaces" className="w-full h-auto" />
-                            <p className="text-black text-lg text-center font-serif mt-4">Watches</p>
+                            <a href='#' className="text-black text-lg text-center font-serif mt-4">Watches</a>
                     </div>
 
-                    <div className='w-full md:w-1/3 p-4'>
+                    <div className='w-full md:w-1/3 p-4 card'>
                             <img src={decorations} alt="Radiant Necklaces" className="w-full h-auto" />
-                            <p className="text-black text-lg text-center font-serif mt-4">Decorations</p>
+                            <a href='#' className="text-black text-lg text-center font-serif mt-4">Decorations</a>
                     </div>
 
-                    <div className='w-full md:w-1/3 p-4'>
+                    <div className='w-full md:w-1/3 p-4 card'>
                             <img src={accessories} alt="Radiant Necklaces" className="w-full h-auto" />
-                            <p className="text-black text-lg text-center font-serif mt-4">Accessories</p>
+                            <a href='#' className="text-black text-lg text-center font-serif mt-4">Accessories</a>
                     </div>
                 </div>
             </div>
@@ -102,19 +106,19 @@ function BodyContent() {
                 <a href='#' className='text-black text-lg text-center font-serif block mt-4 hover:underline'>Explore all</a>
                 <div className="flex flex-col md:flex-row justify-between p-6">
                     <div className='w-full md:w-1/3 p-4 card'>
-                        <img src={accessories} alt="Radiant Necklaces" className="w-full h-auto" />
+                        <img src={jpg} alt="Radiant Necklaces" className="w-full h-auto" />
                         <p className="text-black text-lg text-left font-serif mt-4 font-bold">Masters of Light</p>
                         <p className='text-black text-base md:text-lg text-left font-serif'>Experience a retrospective celebration of Swarovski's innovative spirit at the immersive Masters of Light exhibition. Discover exceptional craftsmanship, creative wonders.</p><br></br>
                         <a href='#' className='text-black text-lg text-center font-serif block mt-4 hover:underline'>Discover more</a>
                     </div>
                     <div className='w-full md:w-1/3 p-4 card'>
-                        <img src={accessories} alt="Radiant Necklaces" className="w-full h-auto" />
+                        <img src={jpg2} alt="Radiant Necklaces" className="w-full h-auto" />
                         <p className='text-black text-lg text-left font-serif font-bold'>How to Wear Pearls Every Day</p>
                         <p className='text-black text-base md:text-lg text-left font-serif'>Discover how pearls can be symbols of elegance and self-expression, elevating everyday looks as minimalist accessories or maximalist statement pieces.</p><br></br>
                         <a href='#' className='text-black text-lg text-center font-serif block mt-4 hover:underline'>Discover more</a>
                     </div>
                     <div className='w-full md:w-1/3 p-4 card'>
-                        <img src={accessories} alt="Radiant Necklaces" className="w-full h-auto" />
+                        <img src={jpg1} alt="Radiant Necklaces" className="w-full h-auto" />
                         <p className='text-black text-lg text-left font-serif font-bold'>The Art of Performance</p>
                         <p className='text-black text-base md:text-lg text-left font-serif'>Step into Swarovski Kristallwelten and enjoy 'The Art of Performance', a dazzling exhibition of iconic costumes curated by renowned artists. Magic awaits.</p><br></br>
                         <a href='#' className='text-black text-lg text-center font-serif block mt-4 hover:underline'>Discover more</a>
