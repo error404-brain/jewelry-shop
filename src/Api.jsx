@@ -17,3 +17,12 @@ export const fetchProducts = async () => {
     throw error;
   }
 };
+
+export const fetchProductById = async (productId) => {
+  try {
+    const response = await api.get(`/products/${productId}`);
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+};
