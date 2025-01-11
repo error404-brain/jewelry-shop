@@ -1,23 +1,28 @@
+// src/component/watchePage.jsx
 import React, { useState, useEffect } from 'react';
-import { fetchProducts } from '../Api';
-import { Link } from 'react-router-dom';
+import { fetchProductByCategoryId } from '../Api'; // Hàm lấy sản phẩm theo categoryId
+import { Link } from 'react-router-dom'; // Import Link
 
-const Products = () => {
+const Productswatches = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
 
   useEffect(() => {
-    fetchProducts()
-      .then((data) => {
+    // Fetch sản phẩm đồng hồ (categoryId = 6)
+    const fetchWatches = async () => {
+      try {
+        const data = await fetchProductByCategoryId(6); // Lấy sản phẩm thuộc danh mục đồng hồ
         setProducts(data);
         setLoading(false);
-      })
-      .catch((err) => {
-        setError('Error fetching products!');
+      } catch (err) {
+        setError('Error fetching watches!');
         setLoading(false);
-      });
-  }, []);
+      }
+    };
+
+    fetchWatches();
+  }, []); // Chỉ fetch sản phẩm một lần khi component mount
 
   if (loading) {
     return <div className="text-center text-lg font-semibold">Loading...</div>;
@@ -58,4 +63,4 @@ const Products = () => {
   );
 };
 
-export default Products;
+export default Productswatches;
