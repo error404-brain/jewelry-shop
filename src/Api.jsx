@@ -34,3 +34,11 @@ export const fetchProductByCategoryId = async (categoryId) => {
   }
 };
 
+export const searchProductByName = async (productName) => {
+  try {
+    const response = await api.get(`/find/search?query=${productName}`);
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+}
