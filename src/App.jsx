@@ -7,6 +7,8 @@ import Footer from './component/Footer';
 import Products from './component/products';  // Component hiển thị danh sách sản phẩm
 import ProductDetail from './component/ProductDetail';
 import Productswatches from './component/watchePage';  // Component cho sản phẩm đồng hồ
+import UserLogin from './component/UserLogin';
+import Register from './component/Register';
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
         <Route path="/products" element={<Products />} />
         <Route path="/product/:id" element={<ProductDetail />} />
         <Route path="/products/category/6" element={<Productswatches />} /> {/* Sản phẩm đồng hồ */}
+        <Route path="/login" element={<UserLogin />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
       <hr />
       <Footer />

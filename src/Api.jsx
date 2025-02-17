@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'http://localhost:3000/api', // Địa chỉ API của bạn
+  baseURL: 'http://localhost:3000/api', 
   headers: {
     'Content-Type': 'application/json',
   },
@@ -9,7 +9,7 @@ const api = axios.create({
 
 export const fetchProducts = async () => {
   try {
-    const response = await api.get('/products');
+    const response = await api.get('/products/products');
     return response.data;
   } catch (error) {
     throw error;
@@ -18,7 +18,7 @@ export const fetchProducts = async () => {
 
 export const fetchProductById = async (productId) => {
   try {
-    const response = await api.get(`/products/${productId}`);
+    const response = await api.get(`/products/products/${productId}`);
     return response.data;
   } catch (error) {
     throw error;
@@ -27,8 +27,8 @@ export const fetchProductById = async (productId) => {
 
 export const fetchProductByCategoryId = async (categoryId) => {
   try {
-    const response = await api.get(`/products/category/${categoryId}`);
-    return response.data;  // Trả về danh sách sản phẩm
+    const response = await api.get(`/products/products/category/${categoryId}`);
+    return response.data;  
   } catch (error) {
     throw error;
   }
@@ -36,8 +36,29 @@ export const fetchProductByCategoryId = async (categoryId) => {
 
 export const searchProductByName = async (productName) => {
   try {
-    const response = await api.get(`/find/search?query=${productName}`);
+    const response = await api.get(`/products/find/search?query=${productName}`);
     return response.data;
+  } catch (error) {
+    throw error;
+  }
+}
+
+export const createCustomer = async (customerData) => {
+  try {
+    const response = await api.post('/customers/customer', customerData);
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+}
+
+export const loginCustomer = async (username, password) => {
+  try {
+    const response = await api.post('/customers/login', {
+      user_name: username,
+      user_password: password
+    });
+    return response;
   } catch (error) {
     throw error;
   }
